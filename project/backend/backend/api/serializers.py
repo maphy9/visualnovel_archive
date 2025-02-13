@@ -9,11 +9,21 @@ class VisualNovelSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["username", "profile_picture", "role"]
+        fields = ["id", "username", "profile_picture", "role"]
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
+        fields = '__all__'
+
+class DeveloperSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Developer
+        fields = '__all__'
+
+class PublisherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publisher
         fields = '__all__'
 
 class CommitSerializer(serializers.ModelSerializer):

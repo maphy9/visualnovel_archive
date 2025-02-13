@@ -15,7 +15,19 @@ class User(AbstractUser):
         return self.username
 
 class Genre(models.Model):
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.name
+    
+class Publisher(models.Model):
+    name = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.name
+    
+class Developer(models.Model):
+    name = models.CharField(max_length=128)
 
     def __str__(self):
         return self.name
@@ -23,12 +35,12 @@ class Genre(models.Model):
 class VisualNovel(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
-    developer = models.CharField(max_length=255)
-    # publisher = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    genres = models.ManyToManyField(Genre, related_name="visual_novels", blank=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    developer = models.ForeignKey(Developer, on_delete=models.SET_NULL, null=True, related_name="visual_novels")
+    publishers = models.ManyToManyField(Publisher, related_name="visual_novels")
+    genres = models.ManyToManyField(Genre, related_name="visual_novels")
 
     def __str__(self):
         return self.title
