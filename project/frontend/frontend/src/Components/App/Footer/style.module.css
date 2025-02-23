@@ -1,0 +1,23 @@
+.footer {
+  height: 79px;
+  width: 76%;
+  padding: 0 12%;
+  color: var(--secondary-color);
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--main-light-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.footer a {
+  margin: 0 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer {
+    width: 100%;
+    padding: 0;
+  }
+}

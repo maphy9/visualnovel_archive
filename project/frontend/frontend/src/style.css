@@ -1,0 +1,24 @@
+:root {
+  --main-color: #0F1216;
+  --main-light-color: #333C48;
+  --secondary-color: #FCF8F5;
+  --accent-color: #70ACEB;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body, #root {
+  width: 100%;
+  background-color: var(--main-color);
+  height: auto;
+  /* overflow-x: hidden; */
+}

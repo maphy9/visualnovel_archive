@@ -1,0 +1,56 @@
+.window {
+  width: 70%;
+}
+
+.choices {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content {
+  background-color: var(--main-light-color);
+  border: 1px solid var(--accent-color);
+  width: calc(100% - 2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 756px;
+}
+
+.discussions_link {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.discussions_link div {
+  font-size: 24px;
+  color: var(--accent-color);
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+@media only screen and (max-width: 900px) {
+  .window {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .window {
+    padding: 0;
+    width: 100%;
+  }
+  .content {
+    min-height: fit-content;
+  }
+}

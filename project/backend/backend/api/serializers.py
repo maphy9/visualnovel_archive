@@ -30,3 +30,33 @@ class CommitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Commit
         fields = '__all__'
+
+class ParagraphSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Paragraph
+        fields = '__all__'
+
+class SideWindowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SideWindow
+        fields = '__all__'
+
+class ReplySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reply
+        fields = '__all__'
+
+class DiscussionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Discussion
+        fields = '__all__'
+
+class LikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Like
+        fields = '__all__'
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__'

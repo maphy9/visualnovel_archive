@@ -1,0 +1,33 @@
+.active {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.inactive {
+  opacity: 0.5;
+  color: var(--secondary-color);
+}
+
+.choice {
+  font-size: 20px;
+  margin: 0 28px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .choice {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .choice {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .choice {
+    font-size: 12px;
+  }
+}

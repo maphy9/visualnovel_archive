@@ -1,0 +1,14 @@
+.notFound {
+  color: var(--secondary-color);
+  font-size: 64px;
+  height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound img {
+  margin-top: 24px;
+  width: 400px;
+}

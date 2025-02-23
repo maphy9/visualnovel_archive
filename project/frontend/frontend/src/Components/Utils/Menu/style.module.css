@@ -1,0 +1,58 @@
+.blurBackground {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.menu {
+  z-index: 2;
+  position: absolute;
+  width: calc(80% - 2px);
+  margin: 0 10%;
+  top: 120px;
+  background-color: var(--main-color);
+  border: 1px solid var(--accent-color);
+}
+
+.close {
+  width: calc(100% - 12px);
+  height: 48px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.close img {
+  width: 24px;
+  height: 24px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item div {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 20px;
+  border: 1px solid var(--accent-color);
+  width: calc(100% - 2px);
+}
+
+.item img {
+  margin-right: 12px;
+  height: 32px;
+  width: 32px;
+}
